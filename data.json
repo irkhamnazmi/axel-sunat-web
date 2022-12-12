@@ -1,0 +1,28 @@
+{
+    "profile": {
+        "fullname": "Aryasatia Axelle Oktavian",
+        "nickname": "Axelle",
+        "img_profile": "/image/axel.png",
+        "img_whatsapp": "/image/whatsapp.svg"
+
+    },
+
+    "event": {
+        "img_bismillah": "./image/bismillah.svg",
+        "img_subhan": "./image/subhan.png",
+        "day": "Hari Senin - Kamis",
+        "date": "Tanggal 19 - 22 Desember 2022",
+        "address": "Dk. Karangdempul RT 05 RW 06",
+        "location": "Jatisawit - Bumiayu"
+    },
+    "timer": {
+        "day": "19",
+        "month": "dec",
+        "year": "2022",
+        "hour": "10",
+        "minute": "30"
+
+    }
+
+
+}
