@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +9,7 @@
 html {
     scroll-behavior: smooth !important;
     min-width: auto;
+    font-family: 'Poppins';
 }
 
 h1 {
@@ -20,17 +22,25 @@ body {
     scroll-behavior: smooth;
     overflow-y: scroll;
     justify-content: center;
-    gap: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* or css grid for more intricate layouts */
+    flex-direction: column;
 }
 
 header {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     top: 0px;
     padding-top: 5%;
     padding-bottom: 5%;
-    gap: 100px;
+    gap: 20px;
     justify-content: center;
     background: linear-gradient(263.42deg, #43A1F6 30.16%, rgba(146, 67, 246, 0.42) 54.5%, rgba(255, 0, 0, 0.29) 80.14%);
 }
@@ -43,20 +53,20 @@ header {
     align-items: center;
     padding: 0.8em;
     margin: auto;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     color: white;
     text-align: center;
-    font-family: 'Poppins';
     line-height: 100px;
+    gap: 16px;
 }
 
 .btn-primary {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     padding: 10px;
-    width: 99px;
+    width: fit-content;
     height: 41px;
     margin-top: 10px;
     background: #4581DA;
@@ -88,13 +98,16 @@ header {
 }
 
 .timer {
-    margin: 20px auto;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px;
-    width: 470px;
+    margin: auto;
+    padding: 2rem;
+    width: max-content;
+    height: fit-content;
+    text-align: center;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
@@ -112,10 +125,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    padding: 0.8rem;
     gap: 16px;
-    width: 429px;
-    height: 162px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .timer-col {
@@ -123,9 +136,19 @@ header {
     flex-direction: row;
     padding: 0px;
     gap: 16px;
-    width: 429px;
-    height: 110px;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 100%;
+    display: flex;
+    padding-top: 5%;
+    padding-right: 20%;
+    padding-left: 20%;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -133,11 +156,10 @@ section {
     position: relative;
     width: 100%;
     height: max-content;
-    margin-bottom: 10px;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
+    gap: 10px;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: #43A1F6;
@@ -145,7 +167,6 @@ section {
 }
 
 section .main-row h2 {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     line-height: 36px;
@@ -165,26 +186,25 @@ section .main-row h2 {
     align-items: center;
     padding: 0px;
     width: 100%;
+    text-align: center;
     height: max-content;
     /* Inside auto layout */
-    gap: 30px;
+    gap: 10px;
 }
 
 .main-col {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     padding: 0px;
-    gap: 52px;
-    width: 100%;
-    height: 167px;
+    width: fit-content;
+    text-align: center;
+    height: fit-content;
     margin-top: 100px;
     margin-bottom: 100px;
     /* Inside auto layout */
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .main-col .card {
@@ -192,13 +212,15 @@ section .main-row h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
     gap: 16px;
-    width: 564px;
-    height: 167px;
+    padding: 16px;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    text-align: center;
     /* Inside auto layout */
     flex: none;
     order: 0;
@@ -206,14 +228,21 @@ section .main-row h2 {
     flex-grow: 1;
 }
 
+#subhan {
+    width: 39px;
+    height: 34px
+}
+
 footer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     position: relative;
     width: 100%;
     height: fit-content;
+    padding-right: 20%;
+    padding-left: 20%;
     /* Gradien 1 */
     background: linear-gradient(263.42deg, #43A1F6 30.16%, rgba(146, 67, 246, 0.42) 54.5%, rgba(255, 0, 0, 0.29) 80.14%);
 }
@@ -223,13 +252,97 @@ footer .col {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     color: white;
     margin: 20px auto;
-    gap: 1000px;
+    flex-wrap: wrap;
+}
+
+footer .col>a,
+p {
+    text-align: left;
+    width: fit-content;
 }
 
 footer .col object {
     pointer-events: none;
+}
+
+.img-bismillah {
+    width: 446;
+    height: 66;
+}
+
+@media (max-width: 800px) {
+    html {
+        scroll-behavior: smooth !important;
+        min-width: auto;
+        font-family: 'Poppins';
+    }
+    header {
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top: 5%;
+        padding-bottom: 20%;
+        margin: 0;
+    }
+    .img-bismillah {
+        width: 246px;
+        height: 66px;
+    }
+    #subhan {
+        width: 21px;
+        height: 18px
+    }
+    h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    h3 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        font-family: 'Poppins';
+    }
+    .timer {
+        height: min-content;
+        gap: 20px;
+        padding: 0.8rem;
+    }
+    .timer h2 {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    main {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .main-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 52px;
+        padding: 0%;
+        width: 100%;
+        height: 167px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    footer {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    footer .col {
+        font-weight: 400;
+        font-size: 10px;
+        gap: 20px;
+        text-align: right;
+    }
+    footer object {
+        width: 20px;
+    }
 }
