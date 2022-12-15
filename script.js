@@ -1,4 +1,4 @@
-fetch('http://localhost:5501/data.json')
+fetch('https://axelle-khitan.vercel.app/data.json')
     .then(res => {
         return res.json()
     })
@@ -97,21 +97,21 @@ function eventDetail() {
     element.scrollIntoView();
 }
 
-function onYouTubePlayerAPIReady(data) {
-    var player = new YT.Player('player', {
-        videoId: '6EAD74vCj9o', // this is the id of the video at youtube (the stuff after "?v=")
-        loop: true,
-        events: {
-            onReady: function(e) {
-                // info.innerHTML = 'video is loaded';
-                e.target.playVideo();
-            },
-            onStateChange: function(event) {
-                if (event.data === 1) {
-                    // info.innerHTML = 'video started playing';
-                }
-            }
-        }
-    });
-    // you can do more stuff with the player variable
-}
+// function onYouTubePlayerAPIReady(data) {
+//     var player = new YT.Player('player', {
+//         videoId: '6EAD74vCj9o', // this is the id of the video at youtube (the stuff after "?v=")
+//         loop: true,
+//         events: {
+//             onReady: function(e) {
+//                 // info.innerHTML = 'video is loaded';
+//                 e.target.playVideo();
+//             },
+//             onStateChange: function(event) {
+//                 if (event.data === 1) {
+//                     // info.innerHTML = 'video started playing';
+//                 }
+//             }
+//         }
+//     });
+//     // you can do more stuff with the player variable
+// }
