@@ -1,9 +1,10 @@
 {
     "profile": {
-        "fullname": "Aryasatia Axelle Oktavian",
+        "fullname": "Aryasatya Axelle Oktavian",
         "nickname": "Axelle",
         "img_profile": "/image/axel.png",
-        "img_whatsapp": "/image/whatsapp.svg"
+        "img_whatsapp": "/image/whatsapp.svg",
+        "lagu": "6EAD74vCj9o"
 
     },
 
@@ -11,16 +12,16 @@
         "img_bismillah": "./image/bismillah.svg",
         "img_subhan": "./image/subhan.png",
         "day": "Hari Senin - Kamis",
-        "date": "Tanggal 19 - 22 Desember 2022",
+        "date": "Tanggal 22 - 24 Desember 2022",
         "address": "Dk. Karangdempul RT 05 RW 06",
         "location": "Jatisawit - Bumiayu"
     },
     "timer": {
-        "day": "19",
+        "day": "22",
         "month": "dec",
         "year": "2022",
-        "hour": "10",
-        "minute": "30"
+        "hour": "0",
+        "minute": "0"
 
     }
 

@@ -1,13 +1,10 @@
-fetch('https://axelle-khitan.vercel.app/data.json')
+fetch('http://localhost:5501/data.json')
     .then(res => {
         return res.json()
     })
     .then(data =>
         get(data)
     )
-
-
-
 
 function get(data) {
 
@@ -43,8 +40,6 @@ function event(data) {
     document.getElementById('date').innerHTML = date
     document.getElementById('address').innerHTML = address
     document.getElementById('location').innerHTML = location
-
-
 
 }
 
@@ -99,4 +94,23 @@ function timer(data) {
 function eventDetail() {
     const element = document.getElementById("event-detail");
     element.scrollIntoView();
+}
+
+function onYouTubePlayerAPIReady() {
+    var player = new YT.Player('player', {
+        videoId: 'gzeOWnnSNjg', // this is the id of the video at youtube (the stuff after "?v=")
+        loop: true,
+        events: {
+            onReady: function(e) {
+                // info.innerHTML = 'video is loaded';
+                e.target.playVideo();
+            },
+            onStateChange: function(event) {
+                if (event.data === 1) {
+                    // info.innerHTML = 'video started playing';
+                }
+            }
+        }
+    });
+    // you can do more stuff with the player variable
 }
