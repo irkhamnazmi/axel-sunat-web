@@ -1,4 +1,4 @@
-fetch('https://axelle-khitan.vercel.app/data.json')
+fetch('http://localhost:5501/data.json')
     .then(res => {
         return res.json()
     })
@@ -18,6 +18,7 @@ function profile(data) {
     const nick = data.nickname
     const img = data.img_profile
     const wa = data.img_whatsapp
+    onYouTubePlayerAPIReady(data.song)
     document.getElementById('title').innerHTML = `${nick} | Walimatul Khitan`
     document.getElementById('nama').innerHTML = full
     document.getElementById('copyright').innerHTML = `© ${full}. All rights reserved.`
@@ -96,9 +97,9 @@ function eventDetail() {
     element.scrollIntoView();
 }
 
-function onYouTubePlayerAPIReady() {
+function onYouTubePlayerAPIReady(data) {
     var player = new YT.Player('player', {
-        videoId: 'gzeOWnnSNjg', // this is the id of the video at youtube (the stuff after "?v=")
+        videoId: '6EAD74vCj9o', // this is the id of the video at youtube (the stuff after "?v=")
         loop: true,
         events: {
             onReady: function(e) {
