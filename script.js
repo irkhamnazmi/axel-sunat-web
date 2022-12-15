@@ -18,7 +18,7 @@ function profile(data) {
     const nick = data.nickname
     const img = data.img_profile
     const wa = data.img_whatsapp
-    onYouTubePlayerAPIReady(data.song)
+        // onYouTubePlayerAPIReady(data.song)
     document.getElementById('title').innerHTML = `${nick} | Walimatul Khitan`
     document.getElementById('nama').innerHTML = full
     document.getElementById('copyright').innerHTML = `© ${full}. All rights reserved.`
@@ -96,22 +96,3 @@ function eventDetail() {
     const element = document.getElementById("event-detail");
     element.scrollIntoView();
 }
-
-// function onYouTubePlayerAPIReady(data) {
-//     var player = new YT.Player('player', {
-//         videoId: '6EAD74vCj9o', // this is the id of the video at youtube (the stuff after "?v=")
-//         loop: true,
-//         events: {
-//             onReady: function(e) {
-//                 // info.innerHTML = 'video is loaded';
-//                 e.target.playVideo();
-//             },
-//             onStateChange: function(event) {
-//                 if (event.data === 1) {
-//                     // info.innerHTML = 'video started playing';
-//                 }
-//             }
-//         }
-//     });
-//     // you can do more stuff with the player variable
-// }
