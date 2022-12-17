@@ -61,6 +61,12 @@ header {
     line-height: 30px;
 }
 
+#imgProfile {
+    width: 266px;
+    height: 238px;
+    pointer-events: none;
+}
+
 .btn-primary {
     display: flex;
     flex-direction: row;
@@ -228,12 +234,10 @@ section h2 {
     margin-bottom: 16px;
 }
 
-.parent-name p {
+.parent-name span {
     font-weight: 400;
     font-size: 16px;
     text-align: center;
-    letter-spacing: 0.01em;
-    line-height: 0rem;
 }
 
 .parent-name .main-col {
@@ -439,24 +443,12 @@ footer .col object {
     height: 66;
 }
 
-#imgProfile {
-    pointer-events: none;
-}
-
-@media (max-width: 1000px),
-screen and (max-height: 800px) {
-    html {
-        scroll-behavior: smooth !important;
-        min-width: auto;
-        font-family: 'Poppins';
-    }
+@media (max-width: 1000px) {
     header {
         padding-right: 10%;
         padding-left: 10%;
-        padding-top: 20%;
-        padding-bottom: 20%;
         margin: 0;
-        gap: 50px;
+        gap: 0px;
     }
     .img-bismillah {
         width: 246px;
@@ -482,8 +474,6 @@ screen and (max-height: 800px) {
     .timer {
         margin-top: 20px;
         margin-bottom: 30px;
-        height: min-content;
-        gap: 20px;
         padding: 0.8rem;
     }
     .timer h2 {
@@ -537,10 +527,87 @@ screen and (max-height: 800px) {
         font-size: 12px;
     }
     .parent-name p {
+        width: max-content;
         font-weight: 400;
         font-size: 12px;
         text-align: center;
         letter-spacing: 0.01em;
         line-height: 0rem;
+    }
+}
+
+@media (max-height: 600px) {
+    header {
+        height: calc(var(--vh, 1vh) * 100);
+        padding-top: 10%;
+        padding-bottom: 10%;
+        gap: 0px;
+    }
+    .profile-content {
+        gap: 0px;
+        margin-top: 10%;
+    }
+    .timer {
+        height: min-content;
+        gap: 1px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 11%;
+    }
+    .timer h2 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .btn-primary {
+        padding: 10px;
+        height: 32px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    #imgProfile {
+        width: 166px;
+        height: 150px;
+    }
+}
+
+@media (min-height: 601px),
+screen and (max-height: 800px) {
+    header {
+        height: calc(var(--vh, 1vh) * 100);
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+    .profile-content {
+        gap: 0px;
+    }
+    .timer {
+        height: min-content;
+        gap: 1px;
+    }
+    h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 36px;
+    }
+    h3 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        font-family: 'Poppins';
+    }
+}
+
+@media (max-width: 300px) {
+    .parent-name span {
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    p {
+        font-size: 12px;
     }
 }
