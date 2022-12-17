@@ -39,7 +39,6 @@ header {
     height: calc(var(--vh, 1vh) * 100);
     padding-top: 10%;
     padding-bottom: 10%;
-    gap: 30px;
     background: linear-gradient(263.42deg, #43A1F6 30.16%, rgba(146, 67, 246, 0.42) 54.5%, rgba(255, 0, 0, 0.29) 80.14%);
 }
 
@@ -54,8 +53,12 @@ header {
     height: fit-content;
     color: white;
     text-align: center;
-    line-height: 100px;
-    gap: 16px;
+    line-height: 50px;
+    gap: 20px;
+}
+
+.profile-content .invited {
+    line-height: 30px;
 }
 
 .btn-primary {
@@ -83,6 +86,7 @@ header {
     cursor: pointer;
     animation-duration: 0.5s;
     animation-name: btn-primary;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes btn-primary {
@@ -144,9 +148,6 @@ header {
 main {
     max-width: 100%;
     display: flex;
-    padding-top: 5%;
-    padding-right: 20%;
-    padding-left: 20%;
     flex-direction: column;
     justify-content: center;
 }
@@ -156,8 +157,11 @@ section {
     width: 100%;
     height: max-content;
     gap: 10px;
-    margin-bottom: 20%;
     display: flex;
+    padding-top: 5%;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 5%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -165,7 +169,7 @@ section {
     /* Inside auto layout */
 }
 
-section .main-row h2 {
+section h2 {
     font-style: normal;
     font-weight: 600;
     line-height: 36px;
@@ -178,7 +182,29 @@ section .main-row h2 {
     background-clip: text;
 }
 
-.main-row {
+.main-row-bg h2 {
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#participant {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+#bg-color {
+    background: linear-gradient(263.42deg, #43A1F6 30.16%, rgba(146, 67, 246, 0.42) 54.5%, rgba(255, 0, 0, 0.29) 80.14%);
+}
+
+.main-row,
+.main-row-bg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,7 +214,46 @@ section .main-row h2 {
     text-align: center;
     height: max-content;
     /* Inside auto layout */
-    gap: 10px;
+    gap: 30px;
+}
+
+.main-row .parent-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding: 0px;
+    gap: 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.parent-name p {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 0rem;
+}
+
+.parent-name .main-col {
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+    margin: 20px auto;
+    align-items: center;
+    height: fit-content;
+    gap: 5px;
+}
+
+.parent-name .main-col .main-row {
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+    margin: 20px auto;
+    align-items: center;
+    height: fit-content;
+    gap: 5px;
 }
 
 .main-col {
@@ -220,6 +285,112 @@ section .main-row h2 {
     text-align: center;
     /* Inside auto layout */
     ;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100%;
+    gap: 2px;
+}
+
+.form-control label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #6F7482;
+}
+
+.form-control input,
+textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    padding: 12px;
+    gap: 10px;
+    background: #F8FAFC;
+    border-radius: 10px;
+    border: #43A1F6;
+    resize: none;
+}
+
+.form-group .btn-primary {
+    width: 100%;
+    justify-content: center;
+}
+
+#list {
+    width: 50%;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 100%;
+}
+
+.list-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.list-control .col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+}
+
+.list-control .col h3 {
+    background: linear-gradient(263.42deg, #43A1F6 30.16%, rgba(146, 67, 246, 0.42) 54.5%, rgba(255, 0, 0, 0.29) 80.14%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.list-control .col span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    letter-spacing: 0.01em;
+    color: #B8BCCA;
+}
+
+.list-control p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
 }
 
 #subhan {
@@ -319,7 +490,7 @@ screen and (max-height: 800px) {
         font-weight: 600;
         font-size: 16px;
     }
-    main {
+    section {
         padding-right: 10%;
         padding-left: 10%;
     }
@@ -346,5 +517,30 @@ screen and (max-height: 800px) {
     }
     footer object {
         width: 20px;
+    }
+    .form-group {
+        width: 100%;
+    }
+    #list {
+        width: 100%;
+    }
+    .list-group {
+        width: 100%;
+    }
+    .list-control .col h3 {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+    }
+    .list-control .col span {
+        font-size: 12px;
+    }
+    .parent-name p {
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        line-height: 0rem;
     }
 }

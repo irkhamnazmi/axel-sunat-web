@@ -1,4 +1,4 @@
-fetch('https://axelle-khitan.vercel.app/data.json')
+fetch('http://localhost:5500/data.json')
     .then(res => {
         return res.json()
     })
@@ -15,13 +15,31 @@ function get(data) {
 
 function profile(data) {
     const full = data.fullname
+    const father = data.father
+    const mother = data.mother
+    const grandFather1 = data.grand_father_1
+    const grandMother1 = data.grand_mother_1
+    const grandMother2 = data.grand_mother_2
     const nick = data.nickname
     const img = data.img_profile
     const wa = data.img_whatsapp
-        // onYouTubePlayerAPIReady(data.song)
+    const doa = data.doa
+    const url = data.url
+    const imgMeta = data.img_meta
+
+    document.querySelector('meta[name="title"]').setAttribute("content", `Walimatul Khitan - ${full}`);
+    document.querySelector('meta[name="description"]').setAttribute("content", doa);
+    document.querySelector('meta[name="image"]').setAttribute("content", imgMeta);
+    document.querySelector('meta[name="url"]').setAttribute("content", url);
+
     document.getElementById('title').innerHTML = `${nick} | Walimatul Khitan`
-    document.getElementById('nama').innerHTML = full
-    document.getElementById('copyright').innerHTML = `© ${full}. All rights reserved.`
+    document.getElementById('fullname').innerHTML = full
+    document.getElementById('father').innerHTML = father
+    document.getElementById('mother').innerHTML = mother
+    document.getElementById('grand-father-1').innerHTML = grandFather1
+    document.getElementById('grand-mother-1').innerHTML = grandMother1
+    document.getElementById('grand-mother-2').innerHTML = grandMother2
+    document.getElementById('copyright').innerHTML = `© Rankep.com All rights reserved.`
     document.getElementById('imgProfile').setAttribute('src', img)
     document.getElementById('wa').setAttribute('data', wa)
 
@@ -96,3 +114,11 @@ function eventDetail() {
     const element = document.getElementById("event-detail");
     element.scrollIntoView();
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    new TypeIt("#inv", {
+        strings: new URLSearchParams(window.location.search).get('undangan'),
+        speed: 200,
+    }).go();
+
+});
