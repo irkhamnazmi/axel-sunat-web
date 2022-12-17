@@ -20,19 +20,19 @@ function profile(data) {
     const grandFather1 = data.grand_father_1
     const grandMother1 = data.grand_mother_1
     const grandMother2 = data.grand_mother_2
-    const nick = data.nickname
-    const img = data.img_profile
     const wa = data.img_whatsapp
-    const doa = data.doa
-    const url = data.url
-    const imgMeta = data.img_meta
+    const img = data.img_profile
+    const nick = data.nickname
+        // const doa = data.doa
+        // const url = data.url
+        // const imgMeta = data.img_meta
 
-    document.querySelector('meta[name="title"]').setAttribute("content", `Walimatul Khitan - ${full}`);
-    document.querySelector('meta[name="description"]').setAttribute("content", doa);
-    document.querySelector('meta[name="image"]').setAttribute("content", imgMeta);
-    document.querySelector('meta[name="url"]').setAttribute("content", url);
+    // document.querySelector('meta[name="title"]').setAttribute("content", `Walimatul Khitan - ${full}`);
+    // document.querySelector('meta[name="description"]').setAttribute("content", doa);
+    // document.querySelector('meta[name="image"]').setAttribute("content", imgMeta);
+    // document.querySelector('meta[name="url"]').setAttribute("content", url);
 
-    document.getElementById('title').innerHTML = `${nick} | Walimatul Khitan`
+    document.getElementById('title').innerHTML = `${nick} | Undangan Khitan`
     document.getElementById('fullname').innerHTML = full
     document.getElementById('parent').innerHTML = `<span>${father} & ${mother}</span>`
     document.getElementById('grand-parent-1').innerHTML = `<span>${grandFather1} & ${grandMother1}</span>`
