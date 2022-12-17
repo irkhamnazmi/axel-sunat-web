@@ -34,11 +34,9 @@ function profile(data) {
 
     document.getElementById('title').innerHTML = `${nick} | Walimatul Khitan`
     document.getElementById('fullname').innerHTML = full
-    document.getElementById('father').innerHTML = father
-    document.getElementById('mother').innerHTML = mother
-    document.getElementById('grand-father-1').innerHTML = grandFather1
-    document.getElementById('grand-mother-1').innerHTML = grandMother1
-    document.getElementById('grand-mother-2').innerHTML = grandMother2
+    document.getElementById('parent').innerHTML = `<span>${father} & ${mother}</span>`
+    document.getElementById('grand-parent-1').innerHTML = `<span>${grandFather1} & ${grandMother1}</span>`
+    document.getElementById('grand-parent-2').innerHTML = grandMother2
     document.getElementById('copyright').innerHTML = `© Rankep.com All rights reserved.`
     document.getElementById('imgProfile').setAttribute('src', img)
     document.getElementById('wa').setAttribute('data', wa)
