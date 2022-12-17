@@ -1,4 +1,4 @@
-fetch('http://axelle-khitan.vercel.app/data.json')
+fetch('https://axelle-khitan.vercel.app/data.json')
     .then(res => {
         return res.json()
     })
