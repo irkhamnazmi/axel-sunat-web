@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 
 <head>
@@ -7,25 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <!-- Primary Meta Tags -->
     <title id="title"></title>
-    <meta name="title" property="og:title" content="Walimatul Khitan - Aryasatya Axelle Oktavian">
+    <meta name="title" property="og:title" content="">
     <meta name="type" property="og:type" content="website">
     <meta name="image" property="og:image" content="https://axelle-khitan.vercel.app/image/axel.png">
-    <meta name="url" property="og:url" content="https://axelle-khitan.vercel.app">
-    <meta name="description" property="og:description" content="Semoga Aryasatya Axelle Oktavian menjadi anak yang sholeh berguna bagi nusa dan bangsa aamiiin ">
+    <meta name="url" property="og:url" content="">
+    <meta name="description" property="og:description" content="">
 
     <link rel="shortcut icon" href="image/axel.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="style.css">
+    <script>
+        let id = Math.floor(Math.random() * 10);
+        document.write('<link rel="stylesheet" href="style.css?v=' + id + '">');
+    </script>
 </head>
 
 <body>
     <header>
         <div class="profile-content">
-            <h1>Walimatul Khitan</h1>
+            <h1>Undangan Khitan</h1>
             <img id="imgProfile" width="266px" height="238px" src="" alt="axel">
-            <h1 id="nama"></h1>
+            <h1 id="fullname"></h1>
+            <div class="invited">
+                <h3>Kepada Yth Bapak/ibu/sdr/i</h3>
+                <h2 class="inv" id="inv"></h2>
+            </div>
+
             <button type="button" onclick="eventDetail()" class="btn btn-primary">Lihat di sini</button>
         </div>
         <div class="timer">
@@ -53,8 +61,8 @@
         </div>
 
     </header>
-    <main id="event-detail">
-        <section>
+    <main>
+        <section id="event-detail">
 
             <div class="main-row">
                 <object class="img-bismillah" id="bismillah" type="image/svg+xml" data="">
@@ -107,6 +115,35 @@
                 <h3>
                     Wassalamu'alaikum Warohmatullahi Wabarokatuh
                 </h3>
+
+                <div class="parent-name">
+                    <h3>
+                        Hormat Kami
+                    </h3>
+                    <div class="main-col">
+                        <p id="father">Bpk Ilham Fajar Yanuar</p>
+                        <p>&</p>
+                        <p id="mother">Ibu Setianingsih</p>
+                    </div>
+
+                </div>
+                <h3>
+                    Wassalamu'alaikum Warohmatullahi Wabarokatuh
+                </h3>
+
+                <div class="parent-name">
+                    <h3>
+                        Turut Mengundang
+                    </h3>
+                    <div class="main-col">
+                        <p id="grand-father-1">Bpk. Drs. Zaini, S.IP., S.Sos., M.Pd</p>
+                        <p>&</p>
+                        <p id="grand-mother-1">Ibu. Dra. Siti subini</p>
+                    </div>
+                    <p id="grand-mother-2">Ibu. Susilowati</p>
+
+
+                </div>
             </div>
 
         </section>
@@ -122,6 +159,30 @@
                 <button type="button" onclick="window.location='https://goo.gl/maps/YVDJDJogcQDwuHuVA'" class="btn btn-primary">Mulai rute</button>
             </div>
         </section>
+        <section id="bg-color">
+            <div class="main-row-bg">
+                <h2>Ucapan Doa</h2>
+                <div class="form-group">
+                    <div class="form-control">
+                        <label for="name">Nama</label>
+                        <input type="text" placeholder="Siapa nama Anda?" id="name" />
+
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Pesan</label>
+                        <textarea placeholder="Apa pesan yang ingin Anda sampaikan?" name="message" id="message"></textarea>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary">Kirim</button>
+
+                </div>
+                <p id="participant">
+                    0 Ucapan
+                </p>
+                <div id="list">
+
+                </div>
+            </div>
+        </section>
 
 
 
@@ -135,12 +196,14 @@
                 </object>
             </a>
 
-            <p id="copyright">-</p>
+            <p id="copyright" onclick="window.location='https://invitation.rankep.com'">-</p>
         </div>
 
 
     </footer>
-
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script type="module" src="fireConfig.js"></script>
     <script src="script.js"></script>
 
 </body>
