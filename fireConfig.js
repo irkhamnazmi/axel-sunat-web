@@ -39,6 +39,9 @@
      let message = document.getElementById('message')
      let date = new Date()
 
+     const userId = push(child(ref(database), 'users')).key;
+
+
      if (name.value == "") {
          name.focus
          name.setAttribute("style", "border:2px solid red;");
@@ -52,15 +55,13 @@
              message.setAttribute("style", "border:0;");
          }, 500);
      } else {
-         const userId = push(child(ref(database), 'users')).key;
-
-         console.log(date);
 
          set(ref(database, 'users/' + userId), {
-             name: name,
-             message: message,
+             name: name.value,
+             message: message.value,
              date: `${date}`
          });
+
          const listGroup = document.getElementById('list-group')
 
          listGroup.remove()
