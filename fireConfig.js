@@ -52,21 +52,21 @@
              message.setAttribute("style", "border:0;");
          }, 500);
      } else {
-         //  const userId = push(child(ref(database), 'users')).key;
+         const userId = push(child(ref(database), 'users')).key;
 
-         //  console.log(date);
+         console.log(date);
 
-         //  set(ref(database, 'users/' + userId), {
-         //      name: name,
-         //      message: message,
-         //      date: `${date}`
-         //  });
-         //  const listGroup = document.getElementById('list-group')
+         set(ref(database, 'users/' + userId), {
+             name: name,
+             message: message,
+             date: `${date}`
+         });
+         const listGroup = document.getElementById('list-group')
 
-         //  listGroup.remove()
-         //  setTimeout(() => {
-         //      listControl()
-         //  }, 300);
+         listGroup.remove()
+         setTimeout(() => {
+             listControl()
+         }, 300);
      }
 
 
