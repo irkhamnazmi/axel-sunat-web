@@ -67,6 +67,8 @@ function timer(data) {
         let minBox = document.getElementById("min-box");
         let secBox = document.getElementById("sec-box");
 
+        let timerContent = document.getElementById('timer-content')
+
         // let endDate = new Date(`"19 dec 2022 8:12:00"`);
         let endDate = new Date(`${data.day} ${data.month} ${data.year} ${data.hour}:${data.minute}:00`);
         let endTime = endDate.getTime();
@@ -90,7 +92,31 @@ function timer(data) {
             hrBox.innerHTML = 0
             minBox.innerHTML = 0
             secBox.innerHTML = 0
+
+            timerContent.innerHTML = `<h2>Waktu Menuju Acara</h2>
+                <h3>Telah dimulai ${moment(endDate).fromNow()}</h3>
+               `
         } else {
+
+            timerContent.innerHTML = `<h2>Waktu Menuju Acara</h2>
+                <div class="timer-col">
+                    <div class="timer-row">
+                        <h1 id="day-box">0</h1>
+                        <h1>Hari</h1>
+                    </div>
+                    <div class="timer-row">
+                        <h1 id="hr-box">0</h1>
+                        <h1>Jam</h1>
+                    </div>
+                    <div class="timer-row">
+                        <h1 id="min-box">0</h1>
+                        <h1>Menit</h1>
+                    </div>
+                    <div class="timer-row">
+                        <h1 id="sec-box">0</h1>
+                        <h1>Detik</h1>
+                    </div>
+                </div>`
             let daysLeft = Math.floor(remainingTime / oneDay)
             let hrsLeft = Math.floor((remainingTime % oneDay) / oneHr)
             let minsLeft = Math.floor((remainingTime % oneHr) / oneMin)

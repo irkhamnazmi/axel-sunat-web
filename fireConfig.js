@@ -97,10 +97,13 @@
              var row = `<div class="list-control">
              <div class="col">
              <object width="25px" type="image/svg+xml" data="/image/user-circle.svg" ></object>
+             <div class="col-title">
              <h3>${childData.name}</h3>
-             <span>. ${
+             <span>${
                  moment(childData.date).fromNow()} </span>
              </div>
+             </div>
+             
              <div class="row">
              <p>${childData.message}</p>
              </div>
