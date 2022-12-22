@@ -367,9 +367,16 @@ textarea {
 .list-control .col {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 0px;
     gap: 10px;
+}
+
+.list-control .col .col-title {
+    padding: 0px;
+    text-align: start;
+    line-height: 0.8rem;
 }
 
 .list-control .col h3 {
@@ -381,9 +388,7 @@ textarea {
 
 .list-control .col span {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 0px;
-    letter-spacing: 0.01em;
+    font-size: 12px;
     color: #B8BCCA;
 }
 
@@ -536,7 +541,7 @@ screen and (max-width: 800px) {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 700px) {
     header {
         height: calc(var(--vh, 1vh) * 100);
         padding-top: 10%;
@@ -552,7 +557,7 @@ screen and (max-width: 800px) {
         gap: 1px;
         padding: 10px;
         margin-top: 20px;
-        margin-bottom: 11%;
+        margin-bottom: 20%;
     }
     .timer h2 {
         font-weight: 600;
