@@ -83,6 +83,7 @@ function timer(data) {
         let oneHr = 60 * oneMin;
         //1 day => 24 hours
         let oneDay = 24 * oneHr;
+        moment.locale('id');
 
         let addZeroes = (num) => (num < 10 ? `0${num}` : num);
 
